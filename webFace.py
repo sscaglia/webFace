@@ -19,9 +19,11 @@ while True:
         gray,
         scaleFactor=1.1,
         minNeighbors=5,
-        minSize=(30, 30),
-        flags=cv2.cv.CV_HAAR_SCALE_IMAGE
+        minSize=(30, 30)
     )
+    
+    if len(faces) > 0:
+        print("Found {0} faces!".format(len(faces)))
 
     # Draw a rectangle around the faces
     for (x, y, w, h) in faces:
